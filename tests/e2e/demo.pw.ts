@@ -140,7 +140,7 @@ test("360px到430px布局无横向溢出、聊天面板和输入可共存", asyn
     await page.setViewportSize({ width, height: 844 });
     await page.goto("./#/app");
     await expect(
-      page.getByRole("heading", { name: "青禾工作台", exact: true }),
+      page.getByRole("heading", { name: "LABU", exact: true }),
     ).toBeVisible();
     expect(
       await page.evaluate(

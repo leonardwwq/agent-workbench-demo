@@ -147,7 +147,7 @@ function Header({
           <ArrowLeftOutlined />
         </button>
       ) : (
-        <span className="m-brand-mark">禾</span>
+        <span className="m-brand-mark">L</span>
       )}
       <h1>{title}</h1>
       <div className="m-header-action">{right || <span />}</div>
@@ -272,7 +272,7 @@ function Work({ state }: { state: AppState }) {
   return (
     <>
       <Header
-        title="青禾工作台"
+        title="LABU"
         back={false}
         right={
           <button
@@ -280,7 +280,7 @@ function Work({ state }: { state: AppState }) {
             aria-label="查看演示说明"
             onClick={() =>
               Dialog.alert({
-                title: "青禾 · 美业 Agent",
+                title: "LABU",
                 content:
                   "这是个人版交互 Mock。可体验经营任务、双端配置和模拟购买。所有数据保存在当前浏览器，不会向真实客户发送消息。",
                 confirmText: "知道了",
@@ -306,7 +306,7 @@ function Work({ state }: { state: AppState }) {
           <span className="m-hero-art">
             <span />
             <span />
-            <span />禾
+            <span />L
           </span>
         </section>
         <div className="m-section-title">
@@ -560,7 +560,7 @@ function Mine({ state }: { state: AppState }) {
         </div>
         <DemoNote />
         <p className="m-footnote">
-          青禾 · 美业 Agent 工作台
+          LABU
           <br />
           Leonard 作品演示
         </p>

@@ -29,7 +29,7 @@ class ErrorBoundary extends React.Component<
     if (this.state.error)
       return (
         <main className="boot-screen">
-          <div className="boot-logo">禾</div>
+          <div className="boot-logo">L</div>
           <h2>页面暂时没有打开</h2>
           <p>本地演示记录仍保存在当前浏览器。</p>
           <pre>{this.state.error}</pre>
@@ -48,7 +48,7 @@ function Shell() {
       {!pathname.startsWith("/admin") && (
         <div className="desktop-demo-bar">
           <Link className="demo-brand" to="/app">
-            <span>禾</span>青禾 · 美业 Agent 工作台
+            <span>L</span>LABU
           </Link>
           <div>
             <span className="demo-hint">个人版 · 交互演示</span>
@@ -110,8 +110,8 @@ function render() {
 }
 root.render(
   <div className="boot-screen">
-    <div className="boot-logo">禾</div>
-    <h2>青禾工作台</h2>
+    <div className="boot-logo">L</div>
+    <h2>LABU</h2>
     <Spin />
     <p>正在恢复本地演示记录…</p>
   </div>,

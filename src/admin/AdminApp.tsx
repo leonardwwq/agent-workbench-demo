@@ -508,12 +508,12 @@ function AdminContent() {
   return (
     <div className={`admin-shell ${collapsed ? "admin-collapsed" : ""}`}>
       <aside className="admin-sidebar">
-        <a className="admin-brand" href="#/admin" aria-label="青禾服务配置">
+        <a className="admin-brand" href="#/admin" aria-label="LABU 服务配置">
           <span className="admin-brand-symbol">
             <ThunderboltFilled />
           </span>
           <span className="admin-brand-text">
-            青禾<span>AGENT WORKSPACE</span>
+            LABU<span>AGENT WORKSPACE</span>
           </span>
         </a>
         <div className="admin-nav-caption">服务配置</div>

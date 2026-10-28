@@ -210,7 +210,7 @@ function seed(mode: "business" | "purchase"): AppState {
     products,
     account: {
       name: "Leonard",
-      storeName: "青禾美学护理",
+      storeName: "LABU 演示门店",
       service: "面部护理",
       subscriptionId: mode === "business" ? "sub-standard" : null,
       subscriptionAt: mode === "business" ? Date.now() : undefined,
@@ -298,6 +298,11 @@ export function initStore(): Promise<void> {
       const row = await db.state.get(STATE_KEY);
       if (!row || row.value.version !== 1)
         await db.state.put({ id: STATE_KEY, value: seed("business") });
+      else if (row.value.account.storeName === "青禾美学护理") {
+        row.value.account.storeName = "LABU 演示门店";
+        row.value.revision++;
+        await db.state.put(row);
+      }
     });
     let previousOwner: string | undefined;
     try {
