@@ -1,4 +1,5 @@
 import { defineConfig } from "@playwright/test";
+const remoteURL = process.env.TEST_BASE_URL;
 export default defineConfig({
   testDir: "./tests/e2e",
   testMatch: "**/*.pw.ts",
@@ -7,7 +8,7 @@ export default defineConfig({
   fullyParallel: false,
   workers: 1,
   use: {
-    baseURL: "http://127.0.0.1:4173",
+    baseURL: remoteURL || "http://127.0.0.1:4173/",
     viewport: { width: 390, height: 844 },
     trace: "retain-on-failure",
     launchOptions: {
@@ -16,10 +17,12 @@ export default defineConfig({
         "/Applications/Google Chrome.app/Contents/MacOS/Google Chrome",
     },
   },
-  webServer: {
-    command: "npm run dev -- --port 4173 --strictPort",
-    url: "http://127.0.0.1:4173",
-    reuseExistingServer: true,
-    timeout: 30000,
-  },
+  webServer: remoteURL
+    ? undefined
+    : {
+        command: "npm run dev -- --port 4173 --strictPort",
+        url: "http://127.0.0.1:4173",
+        reuseExistingServer: true,
+        timeout: 30000,
+      },
 });

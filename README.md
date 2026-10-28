@@ -2,6 +2,13 @@
 
 个人面试作品，可交互的移动 H5 + PC 服务配置 Mock。所有业务、购买、Token 及客户数据均为模拟。无真实模型、服务端、支付、广告投放或消息触达。
 
+## 在线演示
+
+- [门店 H5](https://weipm.com/agent-workbench-demo/#/app)
+- [PC 服务配置端](https://weipm.com/agent-workbench-demo/#/admin)
+
+两端联动请在同一浏览器打开。线上五条端到端流程已通过；使用说明和验收结果见《验收记录.md》。
+
 ## 本地运行
 
 Node.js 22+，运行 `npm ci`，然后 `npm run dev`。
@@ -33,7 +40,7 @@ PC 可调整能力和插件状态、配置四类商品。插件仅为预置配�
 
 ## 部署
 
-Hash 路由、相对静态资源路径，可放在 GitHub Pages 仓库子路径或普通静态主机。默认分支 main 的 GitHub Actions 工作流构建、运行状态层测试并部署 Pages；需仓库 Settings → Pages → Source 为 GitHub Actions。两个端使用同一部署地址的 `#/app` 与 `#/admin`。当前未绑定自定义域名。
+Hash 路由、相对静态资源路径，可放在 GitHub Pages 仓库子路径或普通静态主机。默认分支 main 的 GitHub Actions 工作流构建、运行状态层测试并部署 Pages；需仓库 Settings → Pages → Source 为 GitHub Actions。两个端使用同一部署地址的 `#/app` 与 `#/admin`。本轮未新增域名绑定；GitHub 默认地址当前跳转到现有的 weipm.com，以上 HTTPS 链接已验证。
 
 Telegram 聊天底纹来源及许可说明见 `public/assets/backgrounds/README.md`。全局水印覆盖页面与弹层：Leonard / 王伟权-13502508112。
 
